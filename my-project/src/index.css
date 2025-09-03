@@ -1,0 +1,109 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+    background-color: #1a5292; 
+}
+.shape-transform-container {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  overflow: hidden; /* Sembunyikan bagian yang keluar */
+}
+
+.bar-horizontal,
+.bar-vertical {
+  position: absolute;
+  background: linear-gradient(to bottom right, #e0e7ff, #a7c5ed); /* Gradasi yang sama */
+}
+
+.bar-horizontal {
+  top: 0;
+  left: 0;
+  width: 100%; /* Lebar penuh container */
+  height: 20px; /* Tinggi lengan horizontal */
+  /* Untuk ujung miring di kanan: */
+  transform-origin: 100% 0%; /* Titik putar di kanan atas */
+  transform: skewX(-15deg); /* Miringkan ke kiri sedikit */
+}
+
+.bar-vertical {
+  top: 0;
+  left: 0;
+  width: 20px; /* Lebar lengan vertikal */
+  height: 100%; /* Tinggi penuh container */
+  /* Untuk ujung miring di bawah: */
+  transform-origin: 0% 100%; /* Titik putar di kiri bawah */
+  transform: skewY(-15deg); /* Miringkan ke atas sedikit */
+}
+.profile-info {
+  margin-bottom: 50px;
+}
+
+.profile-info h1 {
+  font-size: 2.5em;
+  font-weight: 600;
+  margin: 0;
+}
+
+.profile-info h2 {
+  font-size: 1.2em;
+  font-weight: 400;
+  margin: 5px 0 10px;
+}
+
+.profile-info p {
+  font-size: 1em;
+  font-weight: 400;
+  max-width: 400px;
+  line-height: 1.5;
+  color: #c4d7e8;
+}
+.sidebar-nav {
+  width: 200px;
+  height: 200px;
+  background-color: #1a5292; /* Warna biru gelap */
+  padding: 20px;
+  box-sizing: border-box; /* Agar padding tidak menambah ukuran total */
+}
+
+.sidebar-nav ul {
+  list-style: none; /* Hilangkan bullet point */
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-nav li {
+  display: flex; /* Gunakan flexbox untuk mensejajarkan garis dan teks */
+  align-items: center; /* Rata tengah secara vertikal */
+  margin-bottom: 15px; /* Jarak antar item */
+  margin-left: 15px;
+  margin-top: 10px;
+}
+
+.sidebar-nav a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  margin-left: 10px; /* Jarak antara garis dan teks */
+  transition: all 0.3s ease; /* Transisi untuk efek hover yang halus */
+  font-weight: 400; /* Normal weight */
+}
+
+.line {
+  width: 40px;
+  height: 2px;
+  background-color: #fff;
+  transition: all 0.3s ease; /* Transisi untuk efek hover yang halus */
+}
+
+/* Efek saat di-hover pada item navigasi */
+.sidebar-nav li:hover .line,
+.sidebar-nav li:active .line {
+  width: 50px;
+  height: 3px;
+}
+
+.sidebar-nav li:hover a,
+.sidebar-nav li:active a {
+  font-weight: bold; /* Teks menjadi bold */
+}
