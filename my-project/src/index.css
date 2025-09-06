@@ -1,48 +1,187 @@
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-    background-color: #1a5292; 
+    background-color: #143D59;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
+
+/* ini adalah css untuk header*/
+/* dan di bawah ini css untuk logo yang menggunakan linier*/
 .shape-transform-container {
   position: relative;
   width: 200px;
   height: 200px;
-  overflow: hidden; /* Sembunyikan bagian yang keluar */
+  z-index: 1;
 }
-
-.bar-horizontal,
-.bar-vertical {
+.bar-horizontal{
   position: absolute;
-  background: linear-gradient(to bottom right, #e0e7ff, #a7c5ed); /* Gradasi yang sama */
-}
-
-.bar-horizontal {
+  margin-left: 6px;
   top: 0;
   left: 0;
-  width: 100%; /* Lebar penuh container */
-  height: 20px; /* Tinggi lengan horizontal */
-  /* Untuk ujung miring di kanan: */
-  transform-origin: 100% 0%; /* Titik putar di kanan atas */
-  transform: skewX(-15deg); /* Miringkan ke kiri sedikit */
+  width: 320px; /* Lebar penuh container */
+  height: 10%; /* Tinggi lengan horizontal */
+  transform: skewX(-50deg); /* Miringkan ke kiri sedikit */
+  background-image: linear-gradient(
+    to right,
+    rgb(255, 255, 255) 0%,
+    #9FAFCA 100%
+  );
 }
-
+.bar-middle{
+width: 20px;
+background-color: white;
+height: 20px;
+border-top-left-radius: 15px;
+}
 .bar-vertical {
+  position: absolute;
+  margin-top:6px;
   top: 0;
   left: 0;
   width: 20px; /* Lebar lengan vertikal */
-  height: 100%; /* Tinggi penuh container */
-  /* Untuk ujung miring di bawah: */
-  transform-origin: 0% 100%; /* Titik putar di kiri bawah */
-  transform: skewY(-15deg); /* Miringkan ke atas sedikit */
+  height: 320px; /* Tinggi penuh container */
+  transform: skewY(-50deg); /* Miringkan ke atas sedikit */
+  background-image: linear-gradient(
+    to bottom,
+    rgb(255, 255, 255) 0%,
+    #9FAFCA 100%
+  );
 }
+/*ini logo css untuk logo _segitiga*/
+.logo_segitiga{
+margin-left: 80px;
+z-index: 2;
+margin-top: -130px;
+}
+.logo1{
+  background-color: rgb(255, 255, 255);
+  height: 25px;
+  width: 25px;
+  margin-left: 25px;
+  transform: rotate(45deg);
+  margin-top: 1px;
+}
+.logo2{
+  background-color: #DFF2FF;
+  height: 25px;
+  width: 25px;
+  margin-left: 7px;
+  transform: rotate(45deg);
+  margin-top: -7px;
+
+}.logo3{
+  background-color: #9FAFCA;
+  height: 25px;
+  width: 25px;
+  margin-left: 25px;
+  transform: rotate(45deg);
+   margin-top: -6px;
+}
+/*css untuk homepage*/
+.homepage{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.homepage .section{
+  margin-left: 180px;
+}
+.homepage .section h1 {
+  color: white;
+  font-size: 8em;
+  font-weight: 100;
+ margin-bottom: 30px;
+
+  }
+
+.homepage .section p{
+   color: white;
+  margin-top:30px;
+}
+.homepage .icon{
+position: relative;
+width: 5px;
+height: 105px;
+border-radius: 20px;
+margin-left: -40px; 
+bottom: 124px;
+
+  background-image: linear-gradient(
+    to bottom,
+     #9FAFCA 0%,
+    white  100%
+     
+   );
+}
+
+.homepage-nav{
+ position: absolute;
+ display: flex;
+  
+    box-sizing: border-box;
+    top: 260px;
+    right: 20px;
+   
+}
+.homepage-bingkai{
+ z-index: 1;
+ 
+}
+.homepage-bingkai-horizontal{
+width: 100px;
+height: 5px;
+background-image: linear-gradient(to right,#9FAFCA 0%,  white  100% );
+border-radius: 15px;
+}
+.homepage-bingkai-middle{
+
+}
+.homepage-bingkai-vertical{
+width: 5px;
+height: 100px;
+background-image: linear-gradient(to right,#9FAFCA 0%,  white  100% );
+border-radius: 15px;
+}
+.homepage-nav ul{
+  list-style: none;
+  z-index: 2;
+}
+.homepage-nav ul li{
+
+}
+.homepage-nav ul li .homepage-line{
+  height: 5px;
+  width: 65px;
+  background-image: linear-gradient(to right,#9FAFCA 0%,  white  100% );
+  border-radius: 15px;
+    position: relative;
+  top:30px;
+    box-sizing: border-box;
+}
+.homepage-nav ul li a {
+  text-decoration: none;
+  color: white;
+  line-height: 30px;
+}
+/*di bawah ini harusnya css untuk Homepage*/
+/*
 .profile-info {
   margin-bottom: 50px;
+  color: white;
+  margin-left: 100px;
+  margin-top: 30px;
 }
 
 .profile-info h1 {
   font-size: 2.5em;
   font-weight: 600;
   margin: 0;
+
 }
 
 .profile-info h2 {
@@ -61,21 +200,22 @@ body {
 .sidebar-nav {
   width: 200px;
   height: 200px;
-  background-color: #1a5292; /* Warna biru gelap */
+  margin-left: 65px;
+  background-color: #1a5292;
   padding: 20px;
-  box-sizing: border-box; /* Agar padding tidak menambah ukuran total */
+  box-sizing: border-box; 
 }
 
 .sidebar-nav ul {
-  list-style: none; /* Hilangkan bullet point */
+  list-style: none;
   padding: 0;
   margin: 0;
 }
 
 .sidebar-nav li {
-  display: flex; /* Gunakan flexbox untuk mensejajarkan garis dan teks */
-  align-items: center; /* Rata tengah secara vertikal */
-  margin-bottom: 15px; /* Jarak antar item */
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px; 
   margin-left: 15px;
   margin-top: 10px;
 }
@@ -84,19 +224,17 @@ body {
   text-decoration: none;
   color: #fff;
   font-size: 18px;
-  margin-left: 10px; /* Jarak antara garis dan teks */
-  transition: all 0.3s ease; /* Transisi untuk efek hover yang halus */
-  font-weight: 400; /* Normal weight */
+  margin-left: 10px; 
+  transition: all 0.3s ease; 
+  font-weight: 400;
 }
 
 .line {
   width: 40px;
   height: 2px;
   background-color: #fff;
-  transition: all 0.3s ease; /* Transisi untuk efek hover yang halus */
-}
+  transition: all 0.3s ease; 
 
-/* Efek saat di-hover pada item navigasi */
 .sidebar-nav li:hover .line,
 .sidebar-nav li:active .line {
   width: 50px;
@@ -105,5 +243,76 @@ body {
 
 .sidebar-nav li:hover a,
 .sidebar-nav li:active a {
-  font-weight: bold; /* Teks menjadi bold */
+  font-weight: bold; 
+ 
+}
+   */
+
+
+/* ini css  untuk footer*/
+
+
+.shape-transform-container-footer {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  bottom: 0;
+  right: 0;
+  margin: 0;
+  transform: rotate(180deg);
+  padding: 0;
+  box-sizing: content-box;
+  
+}
+.bar-horizontal-footer{
+  position:relative;
+ 
+  width: 320px; /* Lebar penuh container */
+  height: 20px; /* Tinggi lengan horizontal */
+  transform: skewX(-50deg); /* Miringkan ke kiri sedikit */
+  background-image: linear-gradient(
+    to right,
+    rgb(255, 255, 255) 0%,
+    #9FAFCA 100%
+  );
+  margin-left: 12px;
+  bottom: 0;
+  left: 0;
+}
+.bar-middle-footer{
+position: relative;
+bottom: 20px;
+width: 23px;
+height: 23px;
+background-color: white;
+border-radius: 15px 0 20px;
+}
+.bar-vertical-footer {
+  position: absolute;
+  top:12px ;
+  width: 20px; /* Lebar lengan vertikal */
+  height: 320px; /* Tinggi penuh container */
+  transform: skewY(-50deg); /* Miringkan ke atas sedikit */
+  background-image: linear-gradient(
+    to bottom,
+    rgb(255, 255, 255) 0%,
+    #9FAFCA 100%
+  );
+
+}
+/*css untuk hak-cipta*/
+.hak-cipta {
+    color: white;
+    position:absolute;
+    text-align: center;
+    padding: 20px ;
+    bottom: 10px;
+    right: 55px;
+}
+
+/* Styling untuk teks hak cipta */
+.hak-cipta p {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
 }
